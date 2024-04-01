@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Andrew Lin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Quicksand', Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .collapsible::before {
+        content: '▶';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .collapsible.active::before {
+        content: '▼';
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #555;
+      }
+
+      .content,
+      .project {
+        display: none;
+        padding: 0 18px;
+        background-color: #f1f1f1;
+      }
+
+      .section {
+        flex: 1 1 30%;
+        max-width: 200px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project-image {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        margin: 10px 0;
+      }
+
+      .container {
+        position: relative;
+        width: 560px;
+        /* Adjust width as needed for your design */
+        height: 315px;
+        /* Adjust height as needed */
+      }
+
+      .rick-roll {
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+      }
+
+      .rickrolltext {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      @media (max-width: 800px) {
+        body {
+          max-width: 60vw;
+        }
+
+        .section {
+          flex-basis: 48%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          max-width: 90vw;
+        }
+
+        .section {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Andrew Lin</h1>
+    <div>
+      <p class="introtext">hi! i am andrew lin, a third-year undergraduate student at the <b><i>university of chicago</i></b>. i major in <b><i>sociology</i></b> and <b><i>media arts and design</i></b>, and i am very passionate about games and play. i seek to both examine them as cultural objects, and try to incorporate my own reflections of sociology into my design process.</p>
+      <p class="introtext">i have worked on quite a few team projects, mostly during my coursework. i really value coordination and communication in the game design process. i am also eager to apply my academic learnings, especially my study of the sociology of culture, in real-world contexts.</p>
+      <p class="introtext">i am also learning to make websites and thus potentially incorporate them into transmedia projects.</p>
+      <p class="introtext">please feel free to browse through my portfolio to see some projects i worked on/am working on! they're mostly group projects - please click on their links for more information.</p>
+    </div>
+
+    <div class="collapsible-section">
+      <button class="collapsible">tabletop games</button>
+      <div class="project" style="display:none;">
+        <div class="container">
+          <p class="rickrolltext">Hehe gotchu</p>
+          <iframe class="rick-roll" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible-section">
+      <button class="collapsible">puzzles</button>
+      <div class="project">
+        <div class="section">
+          <div class="project-image" style="background-image: url('images/sp.png');"></div>
+          <a target="blank" href="https://drive.google.com/drive/u/0/folders/14tN8yf-UFGWWSIed9AxJT0YipiSQfzqb">
+            <h3>Suspect Pursuit</h3>
+          </a>
+          <p>
+            <i>suspect pursuit</i> is my first attempt in creating a puzzle with physical objects. centered around train tickets, the puzzle also tries to explore the creative use of qr codes.
+          </p>
+        </div>
+        <div class="section">
+          <div class="project-image" style="background-image: url('images/ce.png');"></div>
+          <a target="blank" href="https://drive.google.com/drive/u/0/folders/1u8MuvSZEcFj9WNuCjkP7atkyvxYD6z1A">
+            <h3>Café énigme</h3>
+          </a>
+          <p>
+            welcome to <i>café énigme</i>, a puzzle that involves coffee cups, *actual* macarons, study notes, and all the things you need when studying at a café. can you find the hidden message behind everything?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible-section">
+      <button class="collapsible">digital games</button>
+      <div class="project">
+        <div class="section">
+          <div class="project-image" style="background-image: url();"></div>
+          <a target="blank">
+            <h3>Left Behind</h3>
+          </a>
+          <p>
+            <i>left behind</i> is a room escape game about death and mourning, about how someone's physical possessions serve as powerful mementos of their lifetime after their passing. the project will be on itch.io soon!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <a href="pdf/CV.pdf" target="blank"><button class="collapsible">my cv</button></a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const collapsibles = document.getElementsByClassName("collapsible");
+
+        for (let i = 0; i < collapsibles.length; i++) {
+          collapsibles[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.display === "flex") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "flex";
+              // Check if this collapsible contains the Rick Roll and trigger autoplay if applicable
+              const iframe = content.querySelector('.rick-roll');
+              if (iframe) {
+                iframe.src += "&autoplay=1"; // Re-trigger autoplay by appending to the src
+              }
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
